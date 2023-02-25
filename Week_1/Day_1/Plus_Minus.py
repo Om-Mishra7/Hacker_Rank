@@ -1,4 +1,3 @@
-
 import math
 import os
 import random
@@ -18,22 +17,21 @@ def plusMinus(arr):
     zero = 0
     
     # Looping and checking for number type
-    for i in arr:
-        if i > 0:
-            positive =+ 1
-        elif i < 0:
-            negative =+ 1
+    for i in range(0,n):
+        if arr[i] > 0:
+            positive += 1
+        elif arr[i] < 0:
+            negative += 1
         else:
-            zero =+ 1
+            zero += 1
             
     print(str(round(positive/int(len(arr)),6))) 
     print(str(round(negative/int(len(arr)),6))) 
     print(str(round(zero/int(len(arr)),6))) 
             
+# Sample Input
 
-
-n = int(input().strip())
-
-arr = list(map(int, input().rstrip().split()))
+arr = [-4, 3, -9, 0, 4, 1]
+n = 6
 
 plusMinus(arr)
